@@ -3,8 +3,7 @@ package com.example.demo.Dto;
 
 import java.util.Date;
 
-public class
-RegistrationDto {
+public class RegistrationDto {
 
     private Long id;
 

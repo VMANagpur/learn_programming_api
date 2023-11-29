@@ -4,6 +4,8 @@ package com.example.demo.Response;
 import lombok.*;
 import org.springframework.stereotype.Component;
 
+import java.sql.Time;
+
 @Getter
 @Setter
 @AllArgsConstructor
@@ -13,7 +15,7 @@ import org.springframework.stereotype.Component;
 public class MockTestInformationResponse {
 
 
-    private Long totalTime;
+    private Time totalTime;
 
     private Long NoOfQuestions;
 
@@ -23,6 +25,7 @@ public class MockTestInformationResponse {
 
     private Long totalMarks;
 
+    private Long  mockTestId;
 
 
 }

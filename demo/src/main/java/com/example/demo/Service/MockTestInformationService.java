@@ -29,6 +29,7 @@ public class MockTestInformationService {
             mockTestInformationResponse.setNoOfQuestions(mockTestInformation.getNofQuestions());
             mockTestInformationResponse.setPositiveMarking(mockTestInformation.getPositiveMarking());
             mockTestInformationResponse.setTotalMarks(mockTestInformation.getTotalMarks());
+            mockTestInformationResponse.setMockTestId(mockTestInformation.getPaperSetId().getId());
 
             return new ResponseEntity<>(mockTestInformationResponse,HttpStatus.OK);
         }

@@ -3,6 +3,8 @@ package com.example.demo.DataModel;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.sql.Time;
+
 @Entity
 @Getter
 @Setter
@@ -21,7 +23,7 @@ public class MockTestInformation {
     @JoinColumn(name = "paper_sets",referencedColumnName = "id")
     private PaperSet paperSetId;
 
-    private Long totalTime;
+    private Time totalTime;
 
     private Long nofQuestions;
 

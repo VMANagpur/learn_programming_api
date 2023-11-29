@@ -4,25 +4,28 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
-@Entity
-@Table(name = "paper_sets")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class PaperSet {
+@Entity
+@Table(name = "user_answer")
+public class Answer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    Long id;
 
-    private String title;
+    @ManyToOne
+    @JoinColumn(name = "mcq_questions")
+    MCQQuestion question;
 
-    private String description;
+    @ManyToOne
+    @JoinColumn(name = "mcq_options")
+    MCQOption correctOption;
 
-    private LocalDateTime createdTime;
+
 
 }

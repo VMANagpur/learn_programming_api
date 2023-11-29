@@ -16,4 +16,5 @@ public interface RegistrationRepository extends JpaRepository<User,Long> {
     Optional<User> findByEmailAndPassword(String email, String password);
 
 
+
 }

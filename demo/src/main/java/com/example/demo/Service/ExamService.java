@@ -24,4 +24,16 @@ public class ExamService {
         return questionRepository.findAll();
     }
 
+
+    public List<MCQQuestion> getExamQuestionByMockTestId(Long mockTestId)
+    {
+        List<MCQQuestion> mcqQuestions = questionRepository.findByPaperSet(mockTestId);
+        System.out.println(mcqQuestions);
+        if (mcqQuestions != null)
+        {
+            return mcqQuestions;
+        }
+         return null;
+    }
+
 }

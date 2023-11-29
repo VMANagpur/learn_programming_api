@@ -13,6 +13,11 @@ public class MCQQuestion {
 
     private String question;
 
+    @ManyToOne
+    @JoinColumn(name = "paper_set_id")
+    private PaperSet paperSet;
+
+
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "question_id")
     private List<MCQOption> options;
